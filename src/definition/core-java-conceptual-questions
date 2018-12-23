@@ -1,9 +1,20 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A.A programming language is a formal language which contains a set of specific instructions that are used to produce various kinds of desired results.In the same manner the Programming languages are used in computer programming to create programs in order to implement specific algorithms.
 What jdk contains or composed of and define each components?
-A.
+A.JDK is a Java Developer's Key consisted of a comprehensive set of tools, utilities, documentation, and sample code for developing Java programs.
+The main components of JDK are as follows;
+1)The Runtime Interpreter
+2)The Compiler
+3)The Applet Viewer
+4)The Debugger
+5)The Class File Disassembler
+6)The Header and Stub File Generator
+7)The Documentation Generator
+8)Applet Demos
+9)API Source Code
+
 What is IDE?
 A.
 What are the IDEs available in the market to support java?
