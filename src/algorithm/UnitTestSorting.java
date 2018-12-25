@@ -20,8 +20,64 @@ public class UnitTestSorting {
         }catch(Exception ex){
             ex.getMessage();
         }
-
         //Now implement Unit test for rest of the soring algorithm...................below
+
+        sort.insertionSort(unSortedArray);
+        //verify if the unsorted array is sorted by the insertion sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        sort.bubbleSort(unSortedArray);
+        //verify if the unsorted array is sorted by the bubble sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+        sort.mergeSort(unSortedArray);
+        //verify if the unsorted array is sorted by the merge sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        sort.heapSort(unSortedArray);
+        //verify if the unsorted array is sorted by the heap sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        sort.quickSort(unSortedArray);
+        //verify if the unsorted array is sorted by the quick sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        sort.shellSort(unSortedArray);
+        //verify if the unsorted array is sorted by the shell sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        sort.bucketSort(unSortedArray);
+        //verify if the unsorted array is sorted by the bucket sort algorithm.
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+
 
 
     }
