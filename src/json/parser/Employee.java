@@ -8,9 +8,7 @@ public class Employee {
     private String salary;
     private String department;
 
-    public Employee() {
-    }
-
+    public Employee(){}
     public Employee(String empEmail, String empName, String salary, String department) {
         this.empEmail = empEmail;
         this.empName = empName;
