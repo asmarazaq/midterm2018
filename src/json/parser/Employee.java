@@ -5,11 +5,11 @@ public class Employee {
     private String empEmail;
 
     private String empName;
-    private String salary;
+    private double salary;
     private String department;
 
     public Employee(){}
-    public Employee(String empEmail, String empName, String salary, String department) {
+    public Employee(String empEmail, String empName, double salary, String department) {
         this.empEmail = empEmail;
         this.empName = empName;
         this.salary = salary;
@@ -32,11 +32,11 @@ public class Employee {
         this.empName = empName;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
