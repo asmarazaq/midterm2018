@@ -4,18 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class DataReader {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws IOException {
 		/*
-	     * User API to read the below textFile and print to console.
-		 * Use BufferedReader class. 
+		 * User API to read the below textFile and print to console.
+		 * Use BufferedReader class.
 		 * Use try....catch block to handle Exception.
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
@@ -29,65 +25,50 @@ public class DataReader {
 		 */
 
 		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
-
 		FileReader fr = null;
 		BufferedReader br = null;
+		String line;
+		String store = "";
 
-		try {
-			fr = new FileReader(textFile);
-			System.out.println("FileReader find the following path: " + textFile);
-		} catch (FileNotFoundException e) {
-			//e.printStackTrace();
-			System.out.println("We couldn't find the file");
+		try{
+			fr = new FileReader("\\Users\\marwaomar\\eclipse-workspace\\DbConnection\\MidtermNovember2018\\src\\data");
+
+
+		}catch(Exception e){
+			System.out.println("System was not able to find attached file ");
 		}
-		String data = "";
-		try {
+
+		try{
 			br = new BufferedReader(fr);
-			while ((data = br.readLine()) != null) {
-				System.out.println(data);
-			}
-		}catch(IOException e){
-			//e.printStackTrace();
-			System.out.println("We couldn't find the file");
-		}
-		finally {
-			if(fr != null){
-				fr=null;
-			}
-			if(br !=null){
-				br=null;
-			}
-		}
-		String[] storeArray = data.split(" ");
-		List<String> storeList = new LinkedList<String>();
-		Stack<String> storeStack = new Stack<String>();
+			while((line =br.readLine())!= null){
+				System.out.println(line);
+				store+= line;
 
-		for (String element: storeArray) {
-			storeList.add(element);
-			storeStack.push(element);
+			}
+		}catch(Exception e){
+			System.out.println("System was not able to read attached file ");
 		}
-		System.out.println("\n\nLinkedlist LIFO:");
-		Iterator<String> itr = storeList.iterator();
-		while (itr.hasNext()){
-			System.out.print(itr.next()+" ");
-		}
-		System.out.println("\n\nStack LIFO:");
 
-//		for (int k = 0; k<storeStack.size();k++){
-//			System.out.print(storeStack.pop()+ " ");
-//		}
-		while (!storeStack.isEmpty())
-		{
-			System.out.print(storeStack.pop() + " ");
+		String[] storeArray = store.split(" ");
+
+		Stack<String> myStack = new Stack<String>();
+		List<String> myList = new LinkedList<String>();
+		for(String element : storeArray){
+			myStack.add(element);
+			myStack.push(element);
+		}
+		System.out.println("The LinkedList LIFO");
+		Iterator<String> it = myList.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next() + " ");
+		}
+		System.out.println(" The Stack  LIFO");
+
+		while(!myStack.isEmpty()){
+			System.out.println(myStack.pop() + "  ");
 		}
 
 
 	}
 
 }
-
-
-
-
-
-
